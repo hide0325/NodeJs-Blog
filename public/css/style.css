@@ -208,7 +208,6 @@ img {
 .article-list__date {
   font-size: var(--font-size-base);
   color: var(--gray);
-  width: 100px;
   display: inline-block;
   width: 260px;
 }

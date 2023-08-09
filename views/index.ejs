@@ -11,15 +11,22 @@
   height="528"
 />
 
+<!-- prettier-ignore -->
 <section class="articles">
   <h2 class="articles__heading">Latest Posts</h2>
   <ul class="article-ul">
-    <li>
-      <a href="#">
-        <span>Post Title</span>
-        <span class="article-list__date">Date</span>
-      </a>
-    </li>
-    <a href="#" class="pagination">&lt; View Older Posts</a>
+    <% data.forEach(({ id, title, createdAt }) => { %>
+      <li>
+        <a href="/post/<%= id %>">
+          <span><%= title %></span>
+          <span class="article-list__date">
+            <%= dateFormat(createdAt, 'yyyy/MM/dd HH:mm') %>
+          </span>
+        </a>
+      </li>
+      <% }) %>
   </ul>
+  <% if (nextPage !== null) { %>
+    <a href="/?page=<%= nextPage %>" class="pagination">&lt; View Older Posts</a>
+  <% } %>
 </section>
