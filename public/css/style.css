@@ -187,10 +187,6 @@ img {
 }
 
 /* Home Article List */
-.articles {
-  white-space: pre-wrap;
-}
-
 .articles__heading {
   margin-top: 4rem;
   font-weight: 400;
@@ -267,8 +263,8 @@ img {
 
 /* SeachBar */
 .searchBar {
-  /* visibility: hidden;
-  transform: translateY(-100px); */
+  visibility: hidden;
+  transform: translateY(-100px);
   background-color: var(--black);
   padding: 4px 0;
   position: absolute;
@@ -292,6 +288,10 @@ img {
   right: 0;
   color: var(--gray-light);
   padding: 15px;
+}
+
+.article {
+  white-space: pre-wrap;
 }
 
 /* Footer */
